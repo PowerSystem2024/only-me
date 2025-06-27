@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LA LEYENDA DE AANG: AVATAR</title>
+    <script src="./js/avatar.js"></script>
+</head>
+    <body>
+        <!--comentario-->
+        <h1>AVATAR 🔥 💧 🌱 🍃</h1> <!--esto es estatico, NO cambia-->
+
+        <section id="inicio">
+            <button id="boton-jugador">Jugar</button>
+            <button id="boton-reglas">Reglas del juego</button>
+        </section>
+
+       <section id="reglas-del-juego">
+            <h4>REGLAS DEL JUEGO</h4>
+            <ol>
+                <li><strong>Selección de personajes:</strong>
+                    <ul>
+                        <li>El jugador elije uno de los cinco personajes: Zuko, Katara, Aang, Toph, Zuko</li>
+                        <li>El enemigo es asignado aleatoriamente de entre estos personajes</li>
+                    </ul>
+                </li>
+                <li><strong>Ataques:</strong>
+                    <ul>
+                        <li>El jugador elige entre tres ataques: puño, patada y barrida</li>
+                        <li>El enemigo elige su ataque aleatoriamente</li>
+                    </ul>
+                </li>
+                <li><strong>Reglas de combate:</strong>
+                    <ul>
+                        <li><strong>Empate:</strong>Si ambos eligen el mismo ataque</li>
+                        <li><strong>Victoria del jugador</strong>
+                            <ul>
+                                <li>Puño vence a Barrida</li>
+                                <li>Patada vence a Puño</li>
+                                <li>barrida vence a Patada</li>
+                            </ul>
+                        </li>
+                        <li><strong>Derrota del jugador:</strong>Cualquier otra combinación</li>
+                    </ul>
+                </li>
+                <li><strong>Vidas:</strong>
+                    <ul>
+                        <li>Ambos comienzan con 3 vidas</li>
+                        <li>Perder un combate disminuye una vida.</li>
+                    </ul>
+                </li>
+                <li><strong>Fin del juego:</strong>
+                    <ul>
+                        <li><strong>Victoria del jugador:</strong>Enemigo pierde todas sus vidas</li>
+                        <li><strong>Derrota del jugador:</strong>Jugador pierde todas sus vidas</li>
+                        <li>Se desabilitan los botones de ataque y se muestra un boton de reiniciar el juego</li>
+                    </ul>
+                </li>
+                <li><strong>REinicio del juego:</strong>
+                    <ul>
+                        <li>El jugador reinicia el juego recargando la pagina</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+
+        <section id="seleccionar-personaje">
+            <h2>Elije tu personaje</h2>
+            
+            <label for="zuko">Zuko</label> <!--Esta etiqueta es para darle un indicadoer a los usuarios de que estan seleccionando-->
+            <input type="radio" name="personaje" id="zuko"/> <!-- name es para agrupar todos los imput y poder seleccionar-->
+            
+            <label for="katara">Katara</label> <!--El atributo for ayuda a vincular un label con un input a través del mismo id-->
+            <input type="radio" name="personaje" id="katara"/> <!--Acá van los personajes-->
+            
+            <label for="aang">Aang</label> 
+            <input type="radio" name="personaje" id="aang"/> <!--Le damos un atributo id para saber cual es el valor de cada uno-->
+            
+            <label for="toph">Toph</label> 
+            <input type="radio" name="personaje" id="toph"/>
+
+            <label for="zoka">Zoka</label> 
+            <input type="radio" name="personaje" id="zoka"/>
+
+            <button id="boton-personaje">Seleccionar</button> <!--el botón para seleccionar el personaje-->
+            <p id="personaje-seleccionado"></p>
+        </section>
+
+        <section id="seleccionar-ataque"> 
+            <h2>Elige tu ataque</h2> <!--Se puede utilizar varias veces--> 
+            <p>Tu personaje <span id="personaje-jugador"></span> tiene <span id="vidas-jugador">3</span> vidas</p> <!--Pero esto debe ser dinamico, necesitamos que cambie-->
+            <p>El personajes <span id="personaje-enemigo"></span> del enemigo tiene <span id="vidas-enemigo">3</span> vidas</p> <!--Con la etiqueta spam vamos amodificar el 3 con JS-->
+            <p> 
+                <button id="boton-punio">Punio 🥊</button> 
+                <button id="boton-patada">Patada 🤸‍♀️</button> 
+                <button id="boton-barrida">Barrida 🏂</button> 
+            </p>
+        </section>
+        
+        <section id="mensajes"> <!--Será un párrafo dinamico--> 
+        </section> 
+
+        <section id="reiniciar"> 
+            <button id="boton-reiniciar">Reiniciar</button> 
+        </section>
+
+    </body>
+</html>

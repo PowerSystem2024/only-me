@@ -1,0 +1,39 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+#tablero {
+  display: grid;
+  grid-template-columns: repeat(8, 60px);
+  width: fit-content;
+  margin: 20px auto;
+  border: 2px solid #333;
+}
+
+.casilla {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 18px;
+  border: 1px solid #ccc;
+}
+
+.blanco {
+  background-color: #fff;
+}
+
+.negro {
+  background-color: #aaa;
+}
+
+.casilla span {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
